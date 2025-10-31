@@ -1,0 +1,155 @@
+/*
+  Arquivo: src/css/Hero.css (ou onde seu CSS do Hero estiver)
+*/
+
+/* Container principal modificado para ser o "pai"
+  das camadas de fundo e conteúdo.
+*/
+.hero-container {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  padding: 0 20px;
+  padding-top: 100px; 
+  
+  /* --- Adicionado --- */
+  /* Cria o contexto de empilhamento */
+  position: relative;
+  /* Esconde as bolinhas que saírem da tela */
+  overflow: hidden;
+}
+
+/* --- NOVO: Camada do Fundo (Ballpit) --- */
+.ballpit-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Coloca no fundo */
+}
+
+/* Força o canvas do Ballpit a preencher a div */
+.ballpit-background > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* --- NOVO: Camada do Conteúdo (Texto, Botões) --- */
+.hero-foreground {
+  /* Coloca na frente do fundo */
+  position: relative;
+  z-index: 2;
+
+  /* Replica as regras de layout para o conteúdo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Garante que o conteúdo se alinhe */
+}
+
+/* --- Seu código original (sem alterações) ---
+  Estes estilos agora se aplicam aos elementos
+  dentro do .hero-foreground 
+*/
+.hero-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover; 
+  border: 3px solid #333; 
+  margin-bottom: 24px;
+}
+
+.hero-greeting {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  cursor: default; 
+}
+
+.hero-title {
+  font-size: 3rem; 
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px; 
+}
+
+.hero-button-primary,
+.hero-button-secondary {
+  padding: 12px 24px;
+  border-radius: 999px; 
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.hero-button-primary {
+  background-color: #252525;
+  color: #FFFFFF;
+  border: 1px solid #333;
+}
+
+.hero-button-primary:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.hero-button-secondary {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.hero-button-secondary:hover {
+  background-color: #E0E0E0;
+  transform: translateY(-2px);
+}
+
+/* --- Media Queries (sem alterações) --- */
+
+@media (max-width: 768px) {
+  .hero-title {
+    /* Você tinha 3.5rem aqui, mas no seu código original
+       estava 3rem. Vou manter 3.5rem como no seu CSS. */
+    font-size: 3.5rem;
+    max-width: 600px;
+  }
+
+  .hero-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem; 
+  }
+
+  .hero-greeting {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .hero-button-primary,
+  .hero-button-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

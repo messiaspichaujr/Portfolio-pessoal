@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body.light {
+  background-color: #F5F5F5;
+  color: #111111;
+}
+
+/* --- Header --- */
+
+body.light .header-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light .logo {
+  color: #111;
+}
+
+body.light .nav-links a {
+  color: #333;
+}
+
+body.light .nav-links a:hover {
+  color: #000;
+}
+
+body.light .theme-toggle {
+  color: #111;
+}
+
+body.light .theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light .connect-button {
+  background-color: #111111;
+  color: #FFFFFF;
+}
+
+/* --- Hero --- */
+
+body.light .hero-avatar {
+  border-color: #DDD;
+}
+
+body.light .hero-greeting {
+  color: #333;
+}
+
+body.light .hero-title {
+  color: #111;
+}
+
+body.light .hero-button-primary {
+  background-color: #252525;
+  color: #FFFFFF;
+  border: 1px solid #252525;
+}
+
+body.light .hero-button-primary:hover {
+  background-color: #333;
+}
+
+body.light .hero-button-secondary {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #DDD;
+}
+
+body.light .hero-button-secondary:hover {
+  background-color: #F0F0F0;
+}
+
+/* --- Sobre Mim (Light Mode) --- */
+body.light .about-intro {
+  color: #777;
+}
+
+body.light .about-title {
+  color: #111;
+}
+
+body.light .about-description {
+  color: #333;
+}
+
+body.light .about-card {
+  background-color: #FFFFFF;
+  color: #111;
+  border: 1px solid #DDD;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.light .about-card p {
+  color: #555;
+}
+
+body.light .about-card .card-icon {
+  color: #333;
+}
+
+body.light .about-tools h4 {
+  color: #111;
+}
+
+body.light .tools-icons svg {
+  color: #555;
+}
+
+body.light .tools-icons svg:hover {
+  color: #000;
+}
+
+/* --- Projetos (Light Mode) --- */
+
+body.light .projects-intro {
+  color: #777;
+}
+
+body.light .projects-title {
+  color: #111;
+}
+
+body.light .projects-description {
+  color: #333;
+}
+
+body.light .project-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.light .project-content {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.light .projects-see-more {
+  border-color: #333;
+  color: #111;
+}
+
+body.light .projects-see-more:hover {
+  background-color: #111;
+  color: #FFFFFF;
+  border-color: #111;
+}
+
+/* --- Contato (Light Mode) --- */
+body.light .contact-intro {
+  color: #777;
+}
+
+body.light .contact-title {
+  color: #111;
+}
+
+body.light .contact-description {
+  color: #333;
+}
+
+body.light .form-input,
+body.light .form-textarea {
+  background-color: #F0F0F0;
+  border-color: #DDD;
+  color: #111;
+}
+
+body.light .form-input::placeholder,
+body.light .form-textarea::placeholder {
+  color: #555;
+}
+
+body.light .submit-button {
+  background-color: #111;
+  color: #FFFFFF;
+}
+
+body.light .submit-button:hover {
+  background-color: #333;
+}
+
+/* --- Footer (Light Mode) --- */
+
+body.light .footer-email,
+body.light .footer-bottom,
+body.light .footer-bottom a {
+  color: #555;
+}
+
+body.light .footer-email:hover,
+body.light .footer-bottom a:hover {
+  color: #000;
+}
+
+body.light .footer-divider {
+  background-color: #DDD;
+}
