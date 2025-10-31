@@ -1,16 +1,22 @@
-# React + Vite
+# Portfólio Pessoal - Messias Pichau
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório oficial do meu portfólio pessoal, desenvolvido para demonstrar minhas habilidades em desenvolvimento full stack, com foco em tecnologias modernas de frontend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
 
-## React Compiler
+<img width="2537" height="951" alt="image" src="https://github.com/user-attachments/assets/d6454946-5fb9-4a25-973a-cd9f12f6ecfa" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Funcionalidades Principais
+
+Este projeto não é apenas um site estático. Ele foi construído com várias funcionalidades modernas para criar uma experiência de usuário rica e interativa:
+
+* **Design Totalmente Responsivo:** Adaptável a todos os tamanhos de tela, de celulares a desktops.
+* **Modo Claro e Escuro (Dark/Light Mode):** Um seletor de tema que salva a preferência do usuário no `localStorage` do navegador.
+* **Animações 3D Interativas:** A seção Hero principal utiliza `three.js` para renderizar uma "piscina de bolinhas" (Ballpit) que reage ao movimento do cursor.
+* **Animações de UI Suaves:** Animações de carregamento e de *scroll* (rolagem) implementadas com `Framer Motion` para uma navegação fluida.
+* **Formulário de Contato Funcional:** O formulário "Entre em contato" é integrado com o **Web3Forms**, permitindo o envio de e-mails diretamente para minha caixa de entrada sem a necessidade de um backend próprio.
