@@ -1,11 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion'; 
 import { FiArrowUpRight, FiArrowRight } from 'react-icons/fi';
-
 import project1 from '../assets/capa-energetico.png';
 import project3 from '../assets/capa-espetinho.png';
 import project2 from '../assets/capa-pichauprime.png';
 import project4 from '../assets/capa-portal.png';
-
 import '../css/Projects.css';
 
 const projectsData = [
@@ -39,9 +38,34 @@ const projectsData = [
   },
 ];
 
+const gridContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, 
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 }, 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 }, 
+  },
+};
+
 const ProjectCard = ({ image, title, type, link }) => {
   return (
-    <a href={link} className="project-card" target="_blank" rel="noopener noreferrer">
+    <motion.a
+      href={link}
+      className="project-card"
+      target="_blank"
+      rel="noopener noreferrer"
+      variants={cardVariants} 
+    >
       <img src={image} alt={title} className="project-image" />
       <div className="project-content">
         <div className="project-info">
@@ -52,21 +76,35 @@ const ProjectCard = ({ image, title, type, link }) => {
           <FiArrowUpRight size={20} />
         </div>
       </div>
-    </a>
+    </motion.a>
   );
 };
 
 const Projects = () => {
   return (
     <section id="projetos" className="projects-container">
-      <p className="projects-intro">Portfólio</p>
-      <h2 className="projects-title">Meus trabalhos</h2>
-      <p className="projects-description">
-        Bem-vindo ao meu portfólio de desenvolvimento web!
-        Explore uma coleção de projetos que mostram minha expertise em desenvolvimento front-end.
-      </p>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+      >
+        <p className="projects-intro">Portfólio</p>
+        <h2 className="projects-title">Meus trabalhos</h2>
+        <p className="projects-description">
+          Bem-vindo ao meu portfólio de desenvolvimento web!
+          Explore uma coleção de projetos que mostram minha expertise em desenvolvimento front-end.
+        </p>
+      </motion.div>
 
-      <div className="projects-grid">
+      <motion.div
+        className="projects-grid"
+        variants={gridContainerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} 
+      >
         {projectsData.map((project) => (
           <ProjectCard
             key={project.id}
@@ -76,12 +114,20 @@ const Projects = () => {
             link={project.link}
           />
         ))}
-      </div>
+      </motion.div>
 
-      <a href="https://github.com/messiaspichaujr?tab=repositories" target="_blank" className="projects-see-more">
+      <motion.a
+        href="https://github.com/messiaspichaujr?tab=repositories"
+        target="_blank"
+        className="projects-see-more"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.5, delay: 0.5 }} 
+      >
         Ver mais
         <FiArrowRight size={16} style={{ marginLeft: '8px' }} />
-      </a>
+      </motion.a>
     </section>
   );
 };

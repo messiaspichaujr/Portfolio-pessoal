@@ -4,6 +4,7 @@ import '../css/Footer.css';
 const Footer = () => {
   return (
     <footer className="footer-container">
+
       <div className="footer-content">
         <div className="footer-logo">
           Messias<span className="logo-dot">.</span>

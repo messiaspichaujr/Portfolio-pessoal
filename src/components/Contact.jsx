@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiMail } from 'react-icons/fi';
+import CircularText from './CircularText';
 import '../css/Contact.css';
 
 const Contact = () => {
@@ -8,7 +9,7 @@ const Contact = () => {
     email: '',
     message: '',
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
@@ -43,7 +44,7 @@ const Contact = () => {
 
       if (result.success) {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', message: '' }); 
+        setFormData({ name: '', email: '', message: '' });
       } else {
         setSubmitStatus('error');
       }
@@ -56,8 +57,14 @@ const Contact = () => {
 
   return (
     <section id="contato" className="contact-container">
-      <p className="contact-intro">Conecte-se comigo</p>
-      <h2 className="contact-title">Entre em contato</h2>
+      {/* <h2 className="contact-title">Entre em contato</h2> */}
+      <CircularText
+        text="ENTRE*EM*CONTATO*"
+        onHover="speedUp"
+        spinDuration={20}
+        className="custom-class"
+      />
+      <br />
       <p className="contact-description">
         Vamos conversar? Peça um orçamento ou fale comigo sobre possíveis colaborações.
       </p>
@@ -97,7 +104,7 @@ const Contact = () => {
           {isSubmitting ? 'Enviando...' : 'Enviar'}
           {!isSubmitting && <FiMail size={16} style={{ marginLeft: '8px' }} />}
         </button>
-        
+
         {submitStatus === 'success' && (
           <p className="form-success">Mensagem enviada com sucesso! Obrigado.</p>
         )}

@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutMePhoto from '../assets/avatar.png';
+import { motion } from 'framer-motion'; // Continua importado
 import { FaFigma } from "react-icons/fa6";
 import { FaCode, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import { FaGitAlt } from "react-icons/fa6";
@@ -11,7 +12,18 @@ import '../css/About.css';
 
 const About = () => {
   return (
-    <section id="sobre" className="about-container">
+    <motion.section
+      id="sobre"
+      className="about-container"
+
+      initial={{ opacity: 0, y: 50 }} 
+
+      whileInView={{ opacity: 1, y: 0 }} 
+
+      viewport={{ once: true, amount: 0.2 }} 
+
+      transition={{ duration: 0.7 }}
+    >
       <p className="about-intro">Introdução</p>
       <h2 className="about-title">Sobre Mim</h2>
 
@@ -59,7 +71,8 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+      
+    </motion.section> 
   );
 };
 
