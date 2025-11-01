@@ -1,24 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiDownload } from 'react-icons/fi';
-import avatar from '../assets/avatar.png'; 
+import avatar from '../assets/avatar.png';
 import '../css/Hero.css'; // Mantenha seu import do CSS
 
-import Ballpit from './Ballpit'; 
+import Ballpit from './Ballpit';
+import { useIsMobile } from '../hooks/usIsMobile';
 
 const Hero = () => {
+
+  const isMobile = useIsMobile();
+
   return (
     <section className="hero-container">
 
-      <div className="ballpit-background">
-        <Ballpit
-          count={40}
-          gravity={0}
-          friction={0.989}
-          wallBounce={0.9}
-          followCursor={true}
-        />
-      </div>
+      {!isMobile && (
+        <div className="ballpit-background">
+          <Ballpit
+            count={80}
+            gravity={0}
+            friction={0.98}
+            wallBounce={1}
+            followCursor={true}
+          />
+        </div>
+      )}
+      
       <div className="hero-foreground">
         <motion.img
           src={avatar}
@@ -28,7 +35,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         />
-        
+
         <motion.p
           className="hero-greeting"
           initial={{ opacity: 0, y: 20 }}
@@ -37,7 +44,7 @@ const Hero = () => {
         >
           Olá! Me chamo Messias
         </motion.p>
-        
+
         <motion.h4
           className="hero-title"
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +53,7 @@ const Hero = () => {
         >
           Desenvolvedor Full Stack
         </motion.h4>
-        
+
         <motion.div
           className="hero-buttons"
           initial={{ opacity: 0, y: 20 }}
