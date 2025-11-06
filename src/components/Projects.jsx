@@ -27,7 +27,7 @@ const projectsData = [
     image: project3,
     title: 'Espetinhos',
     type: 'Delivery Digital',
-    link: 'https://espetinhodoalemao.com/'
+    link: 'https://espetinho-do-alemao.vercel.app/'
   },
   {
     id: 4,
