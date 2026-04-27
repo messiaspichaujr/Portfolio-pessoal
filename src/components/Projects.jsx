@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FiArrowUpRight, FiArrowRight } from 'react-icons/fi';
 import project1 from '../assets/capa-energetico.png';
 import project3 from '../assets/capa-espetinho.png';
-import project2 from '../assets/capa-pichauprime.png';
+import project2 from '../assets/capa-newshoes.png';
 import project4 from '../assets/capa-portal.png';
 import '../css/Projects.css';
 
@@ -18,9 +18,9 @@ const projectsData = [
   {
     id: 2,
     image: project2,
-    title: 'Pichau Prime',
-    type: 'Hotsite',
-    link: 'https://prime.pichau.com.br/'
+    title: 'New Shoes',
+    type: 'Landing Page',
+    link: 'https://site-new-shoes.vercel.app/'
   },
   {
     id: 3,

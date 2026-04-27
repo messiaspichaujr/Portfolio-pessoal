@@ -15,7 +15,7 @@ const Footer = () => {
       </div>
       <hr className="footer-divider" />
       <div className="footer-bottom">
-        <p>© 2025 Messias Pichau. Todos os direitos reservados.</p>
+        <p>© 2026 Messias Pichau. Todos os direitos reservados.</p>
         <a href="https://www.linkedin.com/in/messiaspichaujr/">Conecte-se comigo</a>
       </div>
     </footer>
