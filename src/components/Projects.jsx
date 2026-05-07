@@ -20,7 +20,7 @@ const projectsData = [
     image: project2,
     title: 'New Shoes',
     type: 'Landing Page',
-    link: 'https://site-new-shoes.vercel.app/'
+    link: 'https://homolog.newshoes.com/'
   },
   {
     id: 3,
