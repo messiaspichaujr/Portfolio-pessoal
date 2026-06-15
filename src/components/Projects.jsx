@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
 import { FiArrowUpRight, FiArrowRight } from 'react-icons/fi';
 import project1 from '../assets/capa-energetico.png';
 import project3 from '../assets/capa-espetinho.png';
@@ -34,7 +34,7 @@ const projectsData = [
     image: project4,
     title: 'Portal do aluno',
     type: 'Sistema escolar',
-    link: 'https://github.com/mari-catolicasc/portal-do-aluno-cursinho-insercao'
+    link: 'https://github.com/messiaspichaujr/portal-do-aluno-cursinho-insercao'
   },
 ];
 
@@ -43,17 +43,17 @@ const gridContainerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, 
+      staggerChildren: 0.2,
     },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 }, 
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 }, 
+    transition: { duration: 0.5 },
   },
 };
 
@@ -64,7 +64,7 @@ const ProjectCard = ({ image, title, type, link }) => {
       className="project-card"
       target="_blank"
       rel="noopener noreferrer"
-      variants={cardVariants} 
+      variants={cardVariants}
     >
       <img src={image} alt={title} className="project-image" />
       <div className="project-content">
@@ -83,7 +83,7 @@ const ProjectCard = ({ image, title, type, link }) => {
 const Projects = () => {
   return (
     <section id="projetos" className="projects-container">
-      
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ const Projects = () => {
         variants={gridContainerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }} 
+        viewport={{ once: true, amount: 0.2 }}
       >
         {projectsData.map((project) => (
           <ProjectCard
@@ -123,7 +123,7 @@ const Projects = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.5, delay: 0.5 }} 
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         Ver mais
         <FiArrowRight size={16} style={{ marginLeft: '8px' }} />
